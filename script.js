@@ -199,7 +199,6 @@ class KaraokeSearch {
                     <div class="result-info">
                         <div class="result-artist">${song.artista}</div>
                         <div class="result-song">${song.musica}</div>
-                        <div class="result-file">${song.arquivo}</div>
                     </div>
                 </div>
             `).join('');
@@ -250,12 +249,10 @@ class KaraokeSearch {
         const modalNumber = document.getElementById('modalNumber');
         const modalArtist = document.getElementById('modalArtist');
         const modalSong = document.getElementById('modalSong');
-        const modalFile = document.getElementById('modalFile');
 
         modalNumber.textContent = song.numero;
         modalArtist.textContent = song.artista;
         modalSong.textContent = song.musica;
-        modalFile.textContent = song.arquivo;
 
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
