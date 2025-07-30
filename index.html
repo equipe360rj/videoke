@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoKaraoke - Busca de Músicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-microphone-alt"></i>
+                <h1>NeoKaraoke</h1>
+            </div>
+            <button id="themeToggle" class="theme-toggle" title="Alternar tema">
+                <i class="fas fa-sun"></i>
+            </button>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Pesquisar música ou artista..." autocomplete="off">
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>Resultados</h2>
+                    <span id="resultsCount" class="results-count"></span>
+                </div>
+                <div class="results-container" id="resultsContainer">
+                    <!-- Resultados serão inseridos aqui -->
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 NeoKaraoke. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Modal para detalhes da música -->
+    <div id="songModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Detalhes da Música</h2>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="song-details">
+                    <div class="song-number" id="modalNumber"></div>
+                    <div class="song-info">
+                        <h3 id="modalArtist"></h3>
+                        <p id="modalSong"></p>
+                        <div class="song-file" id="modalFile"></div>
+                    </div>
+                </div>
+                <div class="song-actions">
+                    <button class="btn btn-primary" id="playBtn">
+                        <i class="fas fa-play"></i> Reproduzir
+                    </button>
+                    <button class="btn btn-secondary" id="queueBtn">
+                        <i class="fas fa-plus"></i> Adicionar à Fila
+                    </button>
+                    <button class="btn btn-outline" id="favoriteBtn">
+                        <i class="far fa-heart"></i> Favoritar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
